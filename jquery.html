@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $(".div1").mouseenter(function(){
+                $(".div1").fadeTo("slow",0.7);
+                
+
+                $("#view").show();
+                $("#view").click(function(){
+                    $("#view").hide();
+                    $("p").show();
+                });
+
+
+            });
+            $(".div1").mouseleave(function(){
+                $(".div1").fadeTo("slow",1);
+                $("#view").hide();
+                $("p").hide();
+            });
+            
+        });
+        </script>
+        <style>
+            .div1{
+                width:20%;
+                height: 10em;
+                display:flex;
+                justify-content: center;
+                background-image: url(https://iyadhkhalfallah.github.io/checkpointsGMC/res/tracks/Objet%20dynamique%20vectoriel.png);
+            }
+            #view{
+                display:none;
+                width: 30%;
+                height:3em;
+                margin-top: 20%;
+
+            }
+            p{
+               font-size:x-large;
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+        <button id="view">view more</button>
+        <p> first image</p>
+        </div>
+    </body>
+</html>
